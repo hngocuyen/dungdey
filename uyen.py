@@ -1,5 +1,5 @@
 # dungdey
-ct cxc
+ct cxcong
 an = a+(n-1)*d
 bns
 def s(a,x):
@@ -25,4 +25,16 @@ def s(n):
 n = 100
 r = s(n)
 print(r)
-
+# find n in 12345678910..... _>
+def f(k):
+    l, c, s = 1, 9, 1
+    while k > l * c:
+        k -= l * c
+        l += 1
+        c *= 10
+        s *= 10
+    n = s + (k - 1) // l
+    d = (k - 1) % l
+    return str(n)[d]
+k = 7
+print(f(k))
